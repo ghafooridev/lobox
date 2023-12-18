@@ -1,0 +1,60 @@
+$borderColor:  rgba(0,0,0,0.3);
+$primary:  #1976d2;
+.container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 500px;
+    color:gray;
+    position: relative;
+    & input{
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border: 1px solid $borderColor;
+     
+    }
+    & .icon {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        padding: 8px;
+        transition: all 0.5s;
+       &.rotate{
+        rotate: 180deg;
+       }
+      }
+    & .list{
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        border: 1px solid $borderColor;
+        height: auto;
+        max-height: 400px;
+        padding: 10px;
+        overflow: auto;
+        & .options{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover{
+                background-color: #e3f2fd;
+            }
+            &.selected{
+                background-color:#e3f2fd ;
+                color:$primary;
+            }
+            & div{
+                display: flex;
+                align-items: center;
+            }
+            & img{
+                width: 20px;
+                margin: 0 5px;
+            }
+        }
+    }
+}
